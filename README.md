@@ -1,51 +1,48 @@
-# Iris-Flower-Classification
-# 🌸 Iris Flower Classification (ML Project)
+# 🏠 Simple Linear Regression on Housing Prices
 
-This project applies **Machine Learning** to the famous **Iris dataset**, one of the most common beginner datasets used to demonstrate classification.  
+This project applies **Simple Linear Regression** to predict housing prices using the **California Housing Dataset**. The goal is to understand how factors like income, house age, population, and location affect median house prices.
 
 ---
 
 ## 📌 Project Overview
-- Dataset: **Iris dataset** (150 samples, 3 classes: Setosa, Versicolor, Virginica)  
+- Dataset: **California Housing Dataset** (20,640 samples, 8 features)  
 - Tools: **Python, Pandas, Seaborn, Matplotlib, Scikit-learn**  
-- Goal: Build a classification model to predict the flower species based on petal & sepal dimensions.  
+- Goal: Build a regression model to predict **Median House Value**.  
 
 ---
 
 ## 🛠️ Steps Performed
-1. **Data Exploration**  
-   - Checked dataset info, missing values, and summary statistics.  
-   - Visualized relationships using pairplot and correlation heatmap.  
+1. **Data Exploration**
+   - Inspected dataset, checked missing values.
+   - Summary statistics and correlation heatmap.  
+   
+2. **Preprocessing**
+   - Split data into train (80%) and test (20%).
+   - Standardized features using **StandardScaler**.  
 
-2. **Preprocessing**  
-   - Split dataset into training/testing sets (80/20).  
-   - Scaled features using StandardScaler.  
+3. **Model Training**
+   - Applied **Linear Regression**.  
 
-3. **Model Building**  
-   - Logistic Regression used as classifier.  
-   - Trained model on training data.  
-
-4. **Model Evaluation**  
-   - Accuracy score  
-   - Classification report (Precision, Recall, F1-score)  
-   - Confusion Matrix visualization  
+4. **Evaluation**
+   - Metrics: **Mean Squared Error (MSE)**, **R² Score**.  
+   - Scatter plot of Actual vs Predicted prices.  
 
 ---
 
 ## 🔑 Key Insights
-- Logistic Regression achieved **~96–100% accuracy** (varies by random split).  
-- Sepal length/width and petal length/width clearly distinguish between species.  
-- Setosa is linearly separable, while Versicolor and Virginica overlap slightly.  
+- **Median Income** is the strongest predictor of house prices.  
+- Linear Regression achieved **R² ~0.6**, meaning it explains ~60% of price variance.  
+- Strong linear relationship, but variance suggests trying advanced ML models (Random Forest, XGBoost).  
 
 ---
 
-## 📂 Project Files
-- `Iris_Classification.ipynb` → Jupyter Notebook with full analysis & model  
+## 📂 Files
+- `Housing_Regression.ipynb` → Full Jupyter/Colab notebook with code & results  
 - `README.md` → Project documentation  
 
 ---
 
 ## 🚀 How to Run
-1. Clone this repo:  
-   ```bash
-   git clone https://github.com/<your-username>/Iris-Classification-Project.git
+```bash
+git clone https://github.com/<your-username>/Housing-Prices-Regression.git
+pip install pandas seaborn matplotlib scikit-learn
